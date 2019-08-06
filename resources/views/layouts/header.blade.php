@@ -35,27 +35,27 @@
         <!-- Branding Image -->
 
         <!--            --><?//dd(Auth::guest())?>
+        <div class="dropdown">
+            @if(Auth::guest())
 
-        @if(Auth::guest())
-            <li class="dropdown">
                 <div class="login_social">
                     <img src="/public/image/door_user.png" alt="">
                     <span>Добро пожаловать!</span>
                 </div>
-            </li>
-        @else
-            <div class="logo">716 ОДКБ</div>
-            <div class="losung">[ Кто, если не мы! ]</div>
-            <li class="dropdown">
+
+            @else
+                <div class="logo">716 ОДКБ</div>
+                <div class="losung">[ Кто, если не мы! ]</div>
 
 
-                <a href="#" class="dropdown-toggle user_header right" data-toggle="dropdown" role="button"
+
+                <a href="#" class="dropdown-toggle user_header right" data-toggle="dropdown_odkb" role="button"
                    aria-expanded="false">
                     <div class="user_avatar left"><img src="{{ Auth::user()->avatar }}" alt=""></div>
                 </a>
 
 
-                <ul class="dropdown-menu" role="menu">
+                <ul class="dropdown_odkb" role="menu">
                     <li>
                         {{--<a href="{{ route('message') }}" class="messages">--}}
                         {{--Сообщения--}}
@@ -69,23 +69,28 @@
                     <li>
                         <a href="{{ route('logout') }}"
                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
+                            document.getElementById('logout-form').submit();">
                             Выйти
                         </a>
-
                         <form id="logout-form" action="{{ route('logout') }}" method="POST"
                               style="display: none;">
                             {{ csrf_field() }}
                         </form>
                     </li>
                 </ul>
-            </li>
 
-        @endif
 
+            @endif
+        </div>
 
     </div>
 </nav>
-
+<script>
+    $(document).ready(function () {
+        $('.user_header').on('click', function () {
+            $('.dropdown_odkb').toggle();
+        });
+    });
+</script>
 
 @include('auth.social')
