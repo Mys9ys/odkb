@@ -7,5 +7,7 @@
 /config
 /.idea
 /.vagrant
+.env.example
+.htaccess
 Homestead.json
 Homestead.yaml
