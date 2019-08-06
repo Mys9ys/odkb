@@ -8,6 +8,7 @@
 /.idea
 /.vagrant
 .env.example
+.env
 .htaccess
 Homestead.json
 Homestead.yaml
