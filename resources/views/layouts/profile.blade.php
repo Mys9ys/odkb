@@ -21,6 +21,7 @@
             </div>
             <div class="tape_rank">Послушник</div>
         </div>
+        <a href="{{ route('history') }}">History</a>
         <div class="progress_bar_box">
             <div class="progress_line_wrapper_1 progress_line_wrapper">
                 <div class="progress_bar_line_1 progress_line_inset"></div>

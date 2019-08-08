@@ -44,7 +44,7 @@
                 </div>
 
             @else
-                <div class="logo">716 ОДКБ</div>
+                <a class="logo" href="/">716 ОДКБ</a>
                 <div class="losung">[ Кто, если не мы! ]</div>
 
 
@@ -62,9 +62,9 @@
                         {{--</a>--}}
                     </li>
                     <li>
-                        {{--<a href="{{ route('profile') }}">--}}
-                        {{--Настройки--}}
-                        {{--</a>--}}
+                        <a href="{{ route('profile') }}">
+                            Профиль
+                        </a>
                     </li>
                     <li>
                         <a href="{{ route('logout') }}"

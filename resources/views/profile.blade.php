@@ -1,7 +1,6 @@
 @include('layouts.header')
 
 
-<?//dd('mi tyt')?>
+@include('layouts.profile')
 
-<p>chto to</p>
 @include('layouts.footer')

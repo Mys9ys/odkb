@@ -21,3 +21,5 @@ Route::post('ulogin', 'UloginController@login');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/history', 'HistoryBlockController@index')->name('history');
+Route::get('/profile', 'ProfileController@index')->name('profile');
